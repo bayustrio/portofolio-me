@@ -8,7 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProv>
       <Layout>
-        <NextSeo title="Muhammad Satrio" description="Portofolio satrio" />
+        <NextSeo title="Muhammad Satrio" description="Portofolio web Satrio" />
+        {/* <p>SEO Added to Page</p> */}
 
         <Component {...pageProps} />
       </Layout>
