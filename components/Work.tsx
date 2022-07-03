@@ -11,7 +11,8 @@ const Work = () => {
           <p className="dark:text-white">
             Satrio is a freelance and front-end developer based in Bekasi. I
             work with the latest front-end frameworks like Next, React js and
-            React Native. I'm always learning to keep improving and be the best.
+            React Native. I&lsquo;m always learning to keep improving and be the
+            best.
           </p>
           <Skills />
         </div>
