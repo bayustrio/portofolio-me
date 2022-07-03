@@ -29,26 +29,29 @@ const Navs = () => {
     handleScroll();
   }, [handleScroll]);
 
-  //   useEffect(() => {
-  //     if (typeof window === "undefined") {
-  //       dispatch({
-  //         type: "GET_THEME",
-  //         payload: theme,
-  //       });
-  //     }
-  //   }, [state.theme]);
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      const localTheme = localStorage.getItem("theme");
 
-  //   useEffect(() => {
-  //     if (typeof window !== "undefined") {
-  //       localStorage.setItem("theme", theme);
-  //     }
-  //   }, []);
+      dispatch({
+        type: "GET_THEME",
+        payload: localTheme ? localTheme : theme,
+      });
+    }
+  }, [state.theme]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", theme);
+    }
+  }, []);
 
   const handleTheme = () => {
     dispatch({
       type: "HANDLE_THEME",
       payload: theme,
     });
+    const localTheme = localStorage.getItem("theme");
     if (theme === "light") {
       document.body.classList.add("dark");
       //   if(window.)
@@ -68,11 +71,13 @@ const Navs = () => {
         // ref={navBars}
         className={
           navFLoat
-            ? `fixed z-10 top-[3] ease-in duration-500 shadow  w-full h-[60px] dark:bg-[#20202380] items-center justify-between px-32 bg-[#ffffff40] backdrop-blur-md flex`
-            : `fixed z-10 top-[3] ease-in duration-500  w-full h-[60px] dark:bg-bgDark items-center justify-between px-32 bg-yellowLight backdrop-blur-md flex`
+            ? `fixed z-10 top-[3] ease-in duration-500 shadow  w-full h-[60px] dark:bg-[#20202380] items-center justify-between xl:px-56 lg:px-56 md:px-56 sm:px-56 p-3 bg-[#ffffff40] backdrop-blur-md flex`
+            : `fixed z-10 top-[3] ease-in duration-500  w-full h-[60px] dark:bg-bgDark items-center justify-between xl:px-56 lg:px-56 md:px-56 sm:px-56 p-3 bg-yellowLight backdrop-blur-md flex`
         }
       >
-        <h1 className="text-red-500 z-10">Nav</h1>
+        <Link href="/">
+          <p className="dark:text-white cursor-pointer">Muhammad Satrio</p>
+        </Link>
 
         <div className="flex items-center gap-3">
           <Link href="/">
