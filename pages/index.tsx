@@ -51,7 +51,7 @@ const Home: NextPage = () => {
               <a
                 href="https://github.com/bayustrio"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="cursor-pointer text-[1.4rem] bg-[#333333] p-2 rounded-full text-white"
               >
                 <BsGithub className="" />
@@ -59,14 +59,14 @@ const Home: NextPage = () => {
               <a
                 href="https://www.facebook.com/bayu.satrio.718689"
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 className="cursor-pointer bg-[#4267B2] text-[1.4rem] p-2 rounded-full text-white"
               >
                 <BsFacebook />
               </a>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 href="mailto:bayustrio7@gmail.com?subject=SendMail&body=Hello Muhammad Satrio"
                 className="cursor-pointer bg-[#EA4234] text-white text-[1.4rem] p-2 rounded-full"
               >
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
               <a
                 className="cursor-pointer bg-[#E4405F] text-[1.4rem] text-white p-2 rounded-full "
                 target="_blank"
-                rel="noopener"
+                rel="noreferrer"
                 href="https://www.instagram.com/bayuu.satrio/"
               >
                 <AiFillInstagram height={15} />
