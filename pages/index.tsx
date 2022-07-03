@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <div className=" xl:w-[60%] lg:w-[60%] sm:w-[60%] md:w-[60%] w-full  ">
           {/* bg-yellowCard dark:bg-blackLight */}
           <p className="text-[1.3rem] dark:text-slate-300 ">
-            Hello, I'm{" "}
+            Hello, I&apos;m{" "}
             <span className="font-bold dark:text-white">
               Muhammad Bayou Satrio
             </span>
